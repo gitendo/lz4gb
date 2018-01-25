@@ -21,7 +21,7 @@
 // OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE
 // SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
-// Slightly modified for Game Boy development by tmk, see https://github.com/gitendo/lz4gb
+// Slightly modified for Game Boy development by tmk, see https://github.com/gitendo/lz4gb 
 
 #define _CRT_SECURE_NO_WARNINGS
 
