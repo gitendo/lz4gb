@@ -1,5 +1,5 @@
 # LZ4GB
-My attempt at creating fast and small LZ4 unpacker in LR35902 assembly. Currently it takes 78 bytes and doesn't use any memory during the process. This however required some [small changes](https://github.com/gitendo/lz4gb/issues/1#issuecomment-433872223) in data format.
+My attempt at creating fast and small [LZ4](https://lz4.org) unpacker in LR35902 assembly. Currently it takes 78 bytes and doesn't use any memory during the process. This however required some [small changes](https://github.com/gitendo/lz4gb/issues/1#issuecomment-433872223) in data format.
 
 - `unlz4gb.asm` - [RGBASM](https://github.com/rednex/rgbds) syntax
 - `unlz4gb.s` - Intelligent Systems assembler syntax
