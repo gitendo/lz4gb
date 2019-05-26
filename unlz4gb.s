@@ -72,14 +72,13 @@ _1
 
 copy:
 ;-------------------------------------------------------------------------------
+	dec	bc
 	inc	b
 	inc	c
-	jr	_skip
 _copy
 	ld	a,(hl+)
 	ld	(de),a
 	inc	de
-_skip
 	dec	c
 	jr	nz,_copy
 	dec	b

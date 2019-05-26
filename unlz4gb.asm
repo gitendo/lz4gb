@@ -72,14 +72,13 @@ get_length:
 
 copy:
 ;-------------------------------------------------------------------------------
+	dec	bc
 	inc	b
 	inc	c
-	jr	.skip
 .copy
 	ld	a,[hl+]
 	ld	[de],a
 	inc	de
-.skip
 	dec	c
 	jr	nz,.copy
 	dec	b
