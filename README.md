@@ -1,5 +1,5 @@
 # LZ4GB
-My attempt at creating fast and small [LZ4](https://lz4.org) unpacker in LR35902 assembly. Currently it takes **73** bytes and doesn't use RAM/HRAM during the process. This however required some small changes in data format. I've removed header data, reversed the order of match distance and length bytes and shortened end sequence. Also, match distance is stored as negative number from now on.
+My attempt at creating fast and small [LZ4](https://lz4.org) unpacker in LR35902 assembly. Currently it takes **73** bytes and doesn't use RAM/HRAM during the process. This however required some small changes in data format. I've removed header data, reversed the order of match distance and length bytes and shortened end sequence. Also, match distance is stored as negative value from now on.
 
 - `unlz4gb.asm` - [RGBASM](https://github.com/rednex/rgbds) syntax
 - `unlz4gb.s` - Intelligent Systems assembler syntax
