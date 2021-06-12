@@ -42,12 +42,7 @@ _set_src
 	ld	h,(hl)		; offset hi
 	ld	l,a             ; offset lo
 
-	ld	a,e		; hl = de - offset
-	sub	l
-	ld	l,a
-	ld	a,d
-	sbc	a,h
-	ld	h,a	
+	add	hl,de		; hl = de + offset (instead of subtracting we add negative value here)
 
 	call	copy		; copy data
 
@@ -59,10 +54,10 @@ _set_src
 get_length:
 ;-------------------------------------------------------------------------------	
 	add	a,(hl)		; add length byte
-	jr	nc,_1
-	inc	b		; increase counter's hi byte
-_1
 	ld	c,a		; move to counter's lo byte
+	adc	b		; increase counter's hi byte if carry is set
+	sub	c
+	ld	b,a
 	ld	a,(hl+)		; re-read and advance to next byte
 	inc	a
 	ret	nz		; return if not 255
